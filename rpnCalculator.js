@@ -38,9 +38,13 @@ function evaluateTokens(tokens) {
     return stack.pop();
 }
 
+function getTokens(sanitizedExpr) {
+    return sanitizedExpr.trim().split(/\s+/);
+}
+
 function calculate(expression) {
     var sanitizedExpr = sanitizeExpression(expression);
-    var tokens = sanitizedExpr.trim().split(/\s+/);
+    var tokens = getTokens(sanitizedExpr);
     return evaluateTokens(tokens);
 }
 
