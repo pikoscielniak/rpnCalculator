@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body ng-app>
+<body ng-app="rpnCalculatorApp" ng-controller="MainCtrl as vm">
 <div class="container">
     <div class="page-header">
         <h1>RPN Calculator</h1>
@@ -20,9 +20,10 @@
                 <label for="expression" class="col-md-2 control-label">RPN expression:</label>
 
                 <div class="input-group col-md-6 col-sm-4">
-                    <input type="text" class="form-control " id="expression" placeholder="Enter expression">
+                    <input type="text" class="form-control " id="expression"
+                           placeholder="Enter expression" ng-model="vm.expression">
                     <span class="input-group-btn">
-                        <button class="btn btn-default">Calculate</button>
+                        <button class="btn btn-default" ng-click="vm.calculate(vm.expression)">Calculate</button>
                     </span>
                 </div>
             </div>
@@ -30,14 +31,15 @@
                 <label for="result" class="col-md-2 control-label">Result:</label>
 
                 <div class="input-group col-md-2 col-sm-2">
-                    <input readonly type="text" class="form-control " id="result">
+                    <input readonly type="text" class="form-control " id="result" ng-model="vm.result">
                     <span class="input-group-btn">
-                        <button class="btn btn-default">Clear</button>
+                        <button class="btn btn-default" ng-click="vm.clear()">Clear</button>
                     </span>
                 </div>
             </div>
         </form>
     </div>
 </div>
-
+<script src="js/dist/app.js"></script>
 </body>
+</html>
