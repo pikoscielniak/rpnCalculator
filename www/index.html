@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RPN Calculator</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body ng-app>
+<div class="container">
+    <div class="page-header">
+        <h1>RPN Calculator</h1>
+    </div>
+
+    <div class="row">
+        <form class="form-horizontal col-md-10 col-md-offset-1">
+            <div class="form-group">
+                <label for="expression" class="col-md-2 control-label">RPN expression:</label>
+
+                <div class="input-group col-md-6 col-sm-4">
+                    <input type="text" class="form-control " id="expression" placeholder="Enter expression">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default">Calculate</button>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="result" class="col-md-2 control-label">Result:</label>
+
+                <div class="input-group col-md-2 col-sm-2">
+                    <input readonly type="text" class="form-control " id="result">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default">Clear</button>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
