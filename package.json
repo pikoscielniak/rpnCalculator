@@ -4,6 +4,7 @@
   "description": "RPN Calculator",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "./node_modules/mocha/bin/_mocha --recursive"
   },
   "author": "piotrekbass",
@@ -29,6 +30,7 @@
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
     "mocha": "^2.1.0",
+    "open": "0.0.5",
     "vinyl-source-stream": "^1.0.0"
   },
   "dependencies": {
